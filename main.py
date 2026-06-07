@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from app.api.routes import router
 
-@app.get("/")
-def root():
-    return {"status": "ok"}
+app = FastAPI(title="KnowledgeGraph AI")
+app.include_router(router)
