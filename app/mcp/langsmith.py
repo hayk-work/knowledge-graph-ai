@@ -1,9 +1,10 @@
 from langsmith import Client
-from app.config import LANGSMITH_API_KEY, LANGSMITH_ENDPOINT, LANGSMITH_PROJECT
+
+from app.config import LANGCHAIN_API_KEY, LANGCHAIN_ENDPOINT, LANGCHAIN_PROJECT
 
 client = Client(
-    api_key=LANGSMITH_API_KEY,
-    api_url=LANGSMITH_ENDPOINT
+    api_key=LANGCHAIN_API_KEY,
+    api_url=LANGCHAIN_ENDPOINT,
 )
 
 
@@ -12,5 +13,5 @@ def log_run(name: str, inputs: dict, outputs: dict):
         name=name,
         inputs=inputs,
         outputs=outputs,
-        project_name=LANGSMITH_PROJECT
+        project_name=LANGCHAIN_PROJECT,
     )

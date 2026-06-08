@@ -219,3 +219,6 @@ __marimo__/
 
 # Project
 data/vector_cache/
+
+# Documentation
+docs/

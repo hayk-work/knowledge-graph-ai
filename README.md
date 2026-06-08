@@ -21,6 +21,11 @@ uv venv && source .venv/bin/activate
 uv sync
 
 cp .env.example .env   # add GROQ_API_KEY, PINECONE_API_KEY, TAVILY_API_KEY
+
+# optional — LangSmith tracing
+# LANGCHAIN_TRACING_V2=true
+# LANGCHAIN_API_KEY=
+# LANGCHAIN_PROJECT=knowledge-graph-ai
 ```
 
 ## Index documents (run once)
