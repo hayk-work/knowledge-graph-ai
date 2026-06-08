@@ -8,5 +8,10 @@ def generate_node(state: State) -> dict:
         RetrievedDocument(text=doc["text"], source=doc["source"], score=doc["score"])
         for doc in state["context"]
     ]
-    answer = generate_answer(state["question"], documents)
+    answer = generate_answer(
+        state["question"],
+        documents,
+        chat_history=state.get("chat_history", []),
+        conversation_summary=state.get("conversation_summary", ""),
+    )
     return {"answer": answer}

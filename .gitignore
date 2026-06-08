@@ -219,6 +219,10 @@ __marimo__/
 
 # Project
 data/vector_cache/
+data/checkpoints.db
+data/checkpoints.db-*
+data/*.db
+data/*.db-*
 
 # Documentation
 docs/
